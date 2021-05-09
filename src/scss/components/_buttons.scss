@@ -33,28 +33,6 @@
 	}
 }
 
-.button-shadow {
-	position: relative;
-
-	&::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		box-shadow: 0 8px 12px rgba(color(typography, 1), 0.12);
-		mix-blend-mode: multiply;
-		transition: box-shadow 0.15s ease;
-	}
-
-	&:hover {
-		&::before {
-			box-shadow: 0 8px 24px rgba(color(typography, 1), 0.25);
-		}
-	}
-}
-
 .button-sm {
 	display: flex;
 	align-items: center;
@@ -73,6 +51,7 @@
 		}
 
 		&:hover {
+			background-color: rgb(252, 249, 249);
 			&::before {
 				box-shadow: 0 4px 16px rgba(color(typography, 1), 0.25);
 			}
@@ -115,11 +94,7 @@
 
 	&:hover {
 		background: lighten(mix(color(primary, 1), color(secondary, 2)), 0.5%);
-		background: linear-gradient(
-			65deg,
-			lighten(color(primary, 1), 0.5%) -25%,
-			lighten(color(secondary, 2), 0.5%) 100%
-		);
+		background: #fcad10;
 	}
 }
 
@@ -131,4 +106,8 @@
 	border: 1px solid white;
 	background-color: transparent;
 	color: white !important;
+
+	&:hover {
+		background-color: #253b80;
+	}
 }
