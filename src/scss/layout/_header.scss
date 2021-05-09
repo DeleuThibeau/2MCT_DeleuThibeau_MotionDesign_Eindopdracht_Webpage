@@ -1,0 +1,74 @@
+.playstation {
+	height: 5rem;
+	width: 5.5rem;
+}
+
+.path {
+	fill: #ffffff;
+}
+
+.site-header {
+	padding: 24px 0;
+	background: #169bd7;
+	min-height: 80vh;
+	position: absolute;
+	width: 100%;
+	border-bottom: 3rem solid #253b80;
+}
+
+.site-header-svg {
+	width: 15rem;
+}
+
+.site-header-svg__fill {
+	fill: white;
+	width: 2rem;
+	height: 1.5rem;
+}
+
+.site-header-svg__fill-opacity {
+	fill: #169bd7;
+	fill-opacity: 0.2;
+}
+
+.site-header_underline {
+	margin-top: 1rem;
+	width: 100%;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.site-header-inner {
+	position: relative; /* To display all elements above the background color */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header-links {
+	display: inline-flex;
+
+	li {
+		display: inline-flex;
+	}
+
+	a:not(.button) {
+		@include font-size(9, mobile, true, true, true);
+		@if (get-font-size(9, desktop) != get-font-size(9, mobile)) {
+			@include media(">medium") {
+				@include font-size(9, desktop, true, true, true);
+			}
+		}
+		@include font-weight(bold);
+		@include anchor-aspect(header);
+		line-height: 16px;
+		padding: 8px 24px;
+	}
+}
+
+@include media(">medium") {
+	.site-header {
+		&::before {
+			height: 640px;
+		}
+	}
+}

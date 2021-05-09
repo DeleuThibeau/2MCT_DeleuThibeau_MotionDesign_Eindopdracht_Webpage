@@ -1,0 +1,32 @@
+.clients {
+	.section-inner {
+		padding-top: 30px;
+	}
+
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	li {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		padding: 10px 0;
+	}
+}
+
+@include media(">medium") {
+	.clients {
+		.section-inner {
+		}
+
+		ul {
+			justify-content: space-around;
+		}
+
+		li {
+			width: auto;
+		}
+	}
+}
